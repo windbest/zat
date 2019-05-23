@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>demo bootstrap</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://unpkg.com/jquery@3.2.1/dist/jquery.js" charset="utf-8"></script>
+    <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" charset="utf-8"></script>
+    <script src="./js/bootstrap.js" charset="utf-8"></script>
+    <script src="./js/script.js" charset="utf-8"></script>
+</head>
+<body>
+<div class="">
+  <p>代码编辑器用到Atom。</p>
+  <p>cmder命令行软件,cd /d E:\web，需要加上/d才能转到相应的目录。</p>
+  <p>创建一个本地服务器，让程序监听文件变化，atom保存时，自动刷新。</p>
+  <p>回到命令行，创建一个package.json文件。在命令行输入yarn init -y，回车；再去安装一个browser-sync；在命令行输入yarn add browser-sync，回车；</p>
+  <p>回到atom编辑器，打开package.json文件，在  "license": "MIT",后面加上以下内容：
+    "scripts": {
+      "start": "./node_modules/.bin/browser-sync start --server --no-notify --files='index.html, *.css, *.js'"
+    },[然后再回到命令行，输入yarn start，回车。]</p>
+</div>
+
+    <div class="component demo">
+
+        <ul class="list-group">
+            <li class="list-group-item active">HTML</li>
+            <!-- active表示激活当前项目，disabled表示禁用当前项目。 -->
+            <li class="list-group-item">CSS</li>
+            <li class="list-group-item">JavaScript</li>
+        </ul>
+        <hr>
+        <div class="list-group">
+            <a href="#" class="list-group-item list-group-item-action active">HTML</a>
+            <!-- active表示激活当前项目，disabled表示禁用当前项目。 -->
+            <a href="#" class="list-group-item list-group-item-warning">CSS</a>
+            <a href="#"
+                class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">JavaScript
+                <span class="badge badge-primary badge-pill">12</span>
+            </a>
+        </div>
+        <!--
+
+        <div class="modal fade show d-block">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">modal</h5>
+                        <button class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <p>hello!~</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary">取消</button>
+                        <button class="btn btn-primary">确认</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="btn btn-danger" data-toggle="modal" data-target="#modal-demo">删除</button>
+         -->
+        <div id="modal-demo" class="container demo">
+            <!-- container-fluid用了这个以后，它的宽度是100%。 -->
+            <div class="row">
+                <div class="col"><span>1</span></div>
+                <div class="col"><span>2</span></div>
+                <div class="col"><span>3</span></div>
+                <div class="w-100"></div>
+                <div class="col"><span>1</span></div>
+                <div class="col"><span>2</span></div>
+                <div class="col"><span>3</span></div>
+            </div>
+            <br>
+            <form action="no" name="" method="POST">
+                小区类型：
+                <br>
+                <select name="map" id="" size="value">
+                    <!-- multiple表示可以多选！ -->
+                    <option value="value">
+                        类型
+                    </option>
+                    <option value="value">
+                        住宅
+                    </option>
+                    <option value="value">
+                        别墅
+                    </option>
+                    <option value="value">
+                        商业
+                    </option>
+                    <option value="value">
+                        写字楼
+                    </option>
+                    <option value="value">
+                        底商
+                    </option>
+
+                </select>
+                <br>
+                小区地理位置：
+                <br>
+                <select name="map" id="" size="value">
+                    <!-- multiple表示可以多选！ -->
+                    <option value="value">城区</option>
+                    <option value="value">武侯区</option>
+                    <option value="value">锦江区</option>
+                    <option value="value">青羊区</option>
+                    <option value="value">金牛区</option>
+                    <option value="value">成华区</option>
+                    <option value="value">龙泉驿区</option>
+                    <option value="value">温江区</option>
+                    <option value="value">新都区</option>
+                    <option value="value">青白江区</option>
+                    <option value="value">双流区</option>
+                    <option value="value">郫都区</option>
+                    <option value="value">蒲江县</option>
+                    <option value="value">大邑县</option>
+                    <option value="value">金堂县</option>
+                    <option value="value">新津县</option>
+                    <option value="value">都江堰市</option>
+                    <option value="value">彭州市</option>
+                    <option value="value">邛崃市</option>
+                    <option value="value">崇州市</option>
+                    <option value="value">简阳市</option>
+                </select>
+                <br>
+                房型：
+                <select name="" id="">
+                    <option value="">套一</option>
+                    <option value="">套二</option>
+                    <option value="">套三</option>
+                    <option value="">套四</option>
+                    <option value="">套五</option>
+                    <option value="">其它</option>
+                </select>
+                <br>
+                用户名：<input type="text" name="name" value="请输入您的手机号码" size="15px" maxlength="11">
+                密码：<input type="password" name="password" value="" size="">
+                <input type="submit" name="submit" value="提交" size="">
+                <input type="reset" name="submit" value="重置" size="">
+                <input type="button" name="button" value="下一步" size="">
+                <br>
+                <input type="radio" name="radio" value="" size="">新房
+                <input type="radio" name="radio" value="" size="">二手房改造
+                <input type="radio" name="radio" value="" size="">别墅
+                <input type="checkbox" name="checkbox" value="" size="" checked>
+                <input type="checkbox" name="checkbox" value="" size="">
+                <input type="checkbox" name="checkbox" value="" size="">
+                <br>
+                其它未尽事宜，请留言：
+                <br>
+                <textarea name="name" id="" cols="30" rows="10"></textarea>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

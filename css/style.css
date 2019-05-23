@@ -1,0 +1,18 @@
+.container.demo {
+    background-color: #363636;
+    height: 100vh;
+    color: gold;
+    -webkit-font-smoothing:antialiased;
+}
+.container.demo .row{
+ background:red;   
+ border-bottom: 3px solid gold;
+}
+.container.demo .row > div > span{
+display: block;
+background: #487bdd;
+color: gold;
+font-size: 20px;
+padding: 8px;
+border: 1px solid #487bdd;
+}
